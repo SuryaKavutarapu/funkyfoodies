@@ -550,3 +550,73 @@ footer .social-links li a:hover {
 .status span{
     color:#555;
  }
+ 
+ 
+ 
+ 
+ 
+.featured {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  width: 100%;
+}
+.featured .featured-post {
+  width: 250px;
+  margin: 10px auto;
+  padding: 10px;
+  border-left: 4px solid #E91E63;
+  border-right: 4px solid #00BCD4;
+  border-top: 4px solid #8e44ad;
+  border-bottom: 4px solid #31e2bf;
+  min-height: 420px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-align-content: center;
+      -ms-flex-line-pack: center;
+          align-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.featured .featured-post .ftitle {
+  font-size: 20px;
+  line-height: 22px;
+  font-weight: 200;
+  color: #E91E63;
+  text-transform: uppercase;
+  font-family: 'Bungee Inline', cursive;
+  margin-bottom: 8px;
+}
+.featured .featured-post .ftitle em {
+  color: #00BCD4;
+}
+.featured .featured-post span {
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.6);
+  font-weight: 400;
+  letter-spacing: 1px;
+  font-family: 'Open Sans', sans-serif;
+  padding-bottom: 10px;
+}
