@@ -1,0 +1,552 @@
+/*
+Theme name: FunkyFoodies
+Theme URI: http://localhost/wordpress/
+Description: This is the Parent Theme of Funky Foodies Website.All CopyRights Reserved by FunkyFoodies @ 2016.Theme Developed by SuryaKavutarapu
+Author: SuryaKavutarapu
+Author URI: http://suryakavutarapu.com
+Version: 0.1
+
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Bungee+Inline|Open+Sans');
+
+body,html{
+    background-color: #fff;
+    overflow-x: hidden;
+    margin:0;
+    padding: 0;
+}
+
+a{
+  text-decoration:none;
+  color:#8e44ad;
+}
+.btn{
+  text-align: center !important;
+  margin:5px auto !important;
+}
+.wrapper{
+  width:900px;
+  margin:0px auto;
+  text-align:left !important;
+}
+
+/*navigation*/
+nav {
+  width: 100%;
+  height: 80px;
+  background-color: #fff;
+  color: #8e44ad;
+  box-shadow: 0 5px 6px -6px rgba(0, 0, 0, 0.6);
+  z-index: 5000;
+}
+nav .wrapper {
+  width: 900px;
+  margin: 0px auto;
+  background-color: #fff;
+}
+nav .wrapper a{
+  text-decoration: none;
+}
+
+nav .wrapper a .brand {
+  line-height: 80px;
+  font-size: 24px;
+  font-weight: 300;
+  padding-left: 10px;
+  font-family: 'Bungee Inline', cursive;
+  float: left;
+}
+nav .wrapper a .brand span {
+  color: #31e2bf;
+}
+nav .wrapper ul {
+  margin: 0px;
+  list-style: none;
+  float: right;
+  z-index:1000;
+  position:relative;
+}
+nav .wrapper ul li {
+  line-height: 80px;
+  display: inline-block;
+}
+nav .wrapper ul li a {
+  padding: 5px 16px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600px;
+  font-family: 'Open Sans', sans-serif;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  color:#8e44ad;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+nav .wrapper ul li a:hover{
+  color: #31e2bf;
+  -webkit-transition: color 300ms ease-in-out;
+  transition: color 300ms ease-in-out;
+}
+
+@media screen and (max-width: 900px) {
+  nav .wrapper {
+    width: 100%;
+  }
+  nav .wrapper .brand {
+    float: none;
+  }
+  /*nav .wrapper ul {
+     position:relative;
+  }*/
+  nav .wrapper ul {
+    position: absolute;
+    top: -100%;
+    left: 0;
+    right: 0;
+    display: block;
+    float: none;
+    margin: 0px;
+    padding: 0px;
+    -webkit-transition: all 500ms ease-in-out;
+    transition: all 500ms ease-in-out;
+  }
+  nav .wrapper ul.is-showing {
+    top: 130px;
+    -webkit-transition: all 500ms ease-in-out;
+    transition: all 500ms ease-in-out;
+  }
+  nav .wrapper ul li {
+    display: block;
+    border-bottom: 1px solid #eee;
+    text-align: center;
+    line-height: 60px;
+    background-color:#fff;
+  }
+  nav .wrapper ul li:hover {
+    background-color: #eee;
+    border-bottom: 1px solid #eee;
+  }
+}
+/*typography*/
+h1 {
+  font-size: 30px;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+h2 {
+  font-size: 22px;
+  font-weight: 300;
+  text-align: left;
+  letter-spacing: 1px;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: 300;
+  text-align: left;
+  letter-spacing: 0.8px;
+}
+
+h1, h2, h3 {
+  font-family: 'Bungee Inline', cursive;
+  color: #8e44ad;
+  -webkit-transition: color 350ms ease-in-out;
+  transition: color 350ms ease-in-out;
+}
+h1:hover, h2:hover, h3:hover {
+  color: #31e2bf;
+  -webkit-transition: color 350ms ease-in-out;
+  transition: color 350ms ease-in-out;
+}
+
+p {
+  font-size: 16px;
+  line-height: 20px;
+  color: rgba(0, 0, 0, 0.6);
+  font-weight: 400;
+  letter-spacing: 1px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+
+.home,aboutus{
+  min-height: 800px;
+  margin:100px auto;
+}
+.home img {
+  width: 100%;
+  height:auto;
+}
+
+
+/*Insta Container styling*/
+
+.flex, .insta-container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.insta-container {
+  width: 100%;
+  margin: 2em auto;
+}
+.insta-container #instagram {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: 0em auto;
+  width: 100%;
+}
+/*Responsive Design*/
+@media screen and (max-width: 600px) {
+  .insta-container #instagram {
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+  }
+
+}
+
+@media screen and (max-width: 900px) {
+  .wrapper{
+      width:100%;
+      padding:0;
+  }
+}
+
+
+@media screen and (max-width: 420px) {
+  h1 {
+    font-size: 24px;
+    font-weight: 300;
+    letter-spacing: 1px;
+  }
+
+  h2 {
+    font-size: 18px;
+    font-weight: 300;
+    letter-spacing: 1px;
+  }
+
+  h3 {
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 0.8px;
+  }
+  
+  p,h3,h2,h1{
+    padding-left:10px;
+  }
+  
+  .home,aboutus{
+  min-height: 800px;
+  margin:50px auto;
+}
+}
+
+
+
+/*posts*/
+
+ .wrapper .post,.wrapper .dashed-post{
+  display: block;
+  box-shadow: 0px 10px 6px -6px rgba(0, 0, 0, 0.4);
+  background-color: #fff;
+  margin: 20px 10px;
+  padding: 20px;
+  min-height: 100px;
+}
+
+.wrapper .post{
+   border-left: 4px solid #31e2bf;
+  border-bottom: 4px solid #31e2bf;
+  border-right: 4px solid #8e44ad;
+  border-top: 4px solid #8e44ad;
+}
+
+.wrapper .dashed-post{
+   border-left: 4px dashed #31e2bf;
+  border-bottom: 4px dashed #31e2bf;
+  border-right: 4px dashed #8e44ad;
+  border-top: 4px dashed #8e44ad;
+}
+
+.wrapper a .post img{
+  max-width:100% !important;
+  height:auto !important;
+} 
+.wrapper .post span {
+  display: inline-block;
+  color: #8e44ad;
+  font-size: 14px;
+}
+.wrapper .post span em {
+  color: #31e2bf;
+}
+
+
+
+
+
+
+
+/*team */
+
+
+
+.team-wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  box-shadow: 0px 10px 6px -6px rgba(0, 0, 0, 0.4);
+  background-color: #fff;
+  margin: 20px 10px;
+  padding: 20px;
+  /*position: absolute;*/
+  min-height: 100px;
+  border-left: 4px solid #31e2bf;
+  border-bottom: 4px solid #8e44ad;
+  border-right: 4px solid #31e2bf;
+  border-top: 4px solid #8e44ad;
+  left: 0;
+  right: 0;
+}
+.team-wrapper img {
+  border-radius: 50%;
+  height: 150px;
+  /*width: 150px;*/
+}
+.team-wrapper .team-content {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 10px;
+}
+.team-wrapper .team-content ul {
+  margin: 0;
+  padding: 0;
+}
+.team-wrapper .team-content ul li {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+.team-wrapper .team-content ul li a {
+  text-decoration: none;
+  color: #8e44ad;
+  font-size: 22px;
+  padding: 0px 15px;
+}
+.team-wrapper .team-content ul li a:hover {
+  color: #31e2bf;
+}
+.team-wrapper span {
+  display: inline-block;
+  color: #31e2bf;
+  font-size: 16px;
+}
+.team-wrapper span em {
+  color: #8e44ad;
+}
+
+@media screen and (max-width: 650px) {
+  .team-wrapper {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+  }
+  .team-wrapper .team-content {
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+  .team-wrapper .team-content h2 {
+    text-align: center !important;
+  }
+}
+
+
+
+
+footer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-align-content: center;
+      -ms-flex-line-pack: center;
+          align-content: center;
+  text-align: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #FAFAFA;
+  border-top: 2px dashed #31e2bf;
+  margin-top: 50px;
+}
+footer .brand {
+  line-height: 80px;
+  font-size: 24px;
+  font-weight: 300;
+  font-family: 'Bungee Inline',cursive;
+  color: #8e44ad;
+  margin: 0;
+}
+footer .brand span {
+  color: #31e2bf;
+}
+footer ul {
+  padding: 0;
+  margin: 0;
+  margin-top: 10px;
+  list-style: none;
+}
+footer ul li {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+footer ul li a {
+  color: #8e44ad;
+  text-decoration: none;
+  padding: 5px 8px;
+  font-size: 12px;
+  text-transform: uppercase;
+  text-align: center;
+}
+footer ul li a:hover {
+  color: #31e2bf;
+  -webkit-transition: all 400ms ease-in-out;
+  transition: all 400ms ease-in-out;
+}
+footer .social-links {
+  padding: 0;
+  margin: 10px auto;
+  list-style: none;
+}
+footer .social-links li {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+footer .social-links li a {
+  color: #8e44ad;
+  text-decoration: none;
+  padding: 5px 8px;
+  font-size: 28px;
+  text-transform: uppercase;
+}
+footer .social-links li a:hover {
+  color: #31e2bf;
+  -webkit-transition: all 400ms ease-in-out;
+  transition: all 400ms ease-in-out;
+}
+
+.cool {
+  color: #31e2bf;
+  font-size: 10px;
+  text-transform: uppercase;
+}
+
+.fa-heart {
+  color: #8e44ad;
+  font-size: 16px;
+}
+
+
+.status{
+  background-color: #FAFAFA;
+  color:#8e44ad;
+  min-height:50px;
+  margin: 20px 10px;
+  padding:20px;
+  box-shadow: 0px 10px 6px -6px rgba(0, 0, 0, 0.4);
+  border-bottom:5px solid #8e44ad;
+}
+.status p{
+    color:#8e44ad;
+    font-size:18px;
+    line-height:20px;
+    letter-spacing:1px;    
+ }
+
+.status span{
+    color:#555;
+ }
